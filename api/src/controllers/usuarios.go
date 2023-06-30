@@ -19,14 +19,14 @@ import (
 
 // CriarUsuario insere um usuário no banco de dados
 func CriarUsuario(w http.ResponseWriter, r *http.Request) {
-	corpoRequest, erro := io.ReadAll(r.Body)
+	corpoRequisicao, erro := io.ReadAll(r.Body)
 	if erro != nil {
 		respostas.Erro(w, http.StatusUnprocessableEntity, erro)
 		return
 	}
 
 	var usuario modelos.Usuario
-	if erro = json.Unmarshal(corpoRequest, &usuario); erro != nil {
+	if erro = json.Unmarshal(corpoRequisicao, &usuario); erro != nil {
 		respostas.Erro(w, http.StatusBadRequest, erro)
 		return
 	}
