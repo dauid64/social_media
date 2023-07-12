@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atualizar Publicação - {{ .Titulo }}</title>
+    <link rel="stylesheet" href="/assets/css/bootstrap.css" />
+</head>
+
+<body>
+    {{ template "cabecalho" }}
+
+    <div class="container-floid" style="margin: 1rem;">
+        <div class="row mt-4">
+            <div class="col-12">
+                <h3>Atualizar Publicação</h3>
+                <div class="form-group">
+                    <label for="titulo">Título</label>
+                    <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Insira o título da sua publicação" value="{{ .Titulo }}">
+                    <label for="conteudo">Conteúdo</label>
+                    <textarea name="conteudo" id="conteudo" class="form-control" placeholder="Escreva o conteúdo da sua publicação">{{ .Conteudo }}</textarea>
+                </div>
+                <button id="atualizar-publicacao" class="btn btn-info" data-publicacao-id="{{ .ID }}">Salvar Alterações</button>
+            </div>
+        </div>
+    </div>
+
+    {{ template "rodape" }}
+    {{ template "scripts" }}
+
+    <script src="/assets/js/publicacoes.js"></script>
+</body>
+
+</html>
