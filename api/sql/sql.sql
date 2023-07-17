@@ -1,5 +1,5 @@
-CREATE DATABASE IF NOT EXISTS devbook;
-USE devbook;
+CREATE DATABASE IF NOT EXISTS site_go;
+USE site_go;
 
 DROP TABLE IF EXISTS publicacoes;
 DROP TABLE IF EXISTS seguidores;
