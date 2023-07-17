@@ -1,6 +1,6 @@
 {{ define "cabecalho" }}
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary p-3">
-    <a class="navbar-brand" href="#">Site</a>
+    <span class="navbar-brand">Site</span>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-principal"
         aria-controls="navbar-principal" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -23,7 +23,7 @@
         </ul>
     </div>
     <span class="navbar-text p-0">
-        <a href="/logout">Sair</a>
+        <a href="/logout" class="nav-link">Sair<i class="fas fa-power-off" style="margin-left: 0.3rem;"></i></a>
     </span>
 </nav>
 {{ end }}

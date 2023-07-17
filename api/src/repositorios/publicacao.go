@@ -72,9 +72,9 @@ func (repositorio Publicacoes) Buscar(usuarioID uint64) ([]modelos.Publicacao, e
 	linhas, erro := repositorio.db.Query(`
 		SELECT DISTINCT p.*, u.nick FROM publicacoes p
 		INNER JOIN usuarios u ON u.id = p.autor_id 
-		INNER JOIN seguidores s ON p.autor_id = s.usuario_id 
+		LEFT JOIN seguidores s ON p.autor_id = s.usuario_id 
 		WHERE u.id = ? OR s.seguidor_id = ?
-		ORDER BY 1 DESC`,
+		ORDER BY 1 DESC;`,
 		usuarioID, usuarioID,
 	)
 

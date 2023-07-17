@@ -11,9 +11,11 @@ function fazerLogin(evento) {
             senha: $('#senha').val(),
         }
     }).done(function() {
-        window.location = "/home";
-    }).fail(function(erro) {
-        console.log(erro);
-        alert("Usuário ou senha inválidos!");
+        Swal.fire("Sucesso!", "Login feito com sucesso!", "success")
+            .then(function() {
+                window.location = "/home";
+            })
+    }).fail(function() {
+        Swal.fire("Ops...", "Usuário ou senha inválidos!", "error");
     });
 }

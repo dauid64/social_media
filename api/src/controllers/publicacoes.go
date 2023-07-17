@@ -76,6 +76,7 @@ func BuscarPublicacoes(w http.ResponseWriter, r *http.Request) {
 
 	repositorio := repositorios.NovoRepositorioDePublicacoes(db)
 	publicacoes, erro := repositorio.Buscar(usuarioId)
+
 	if erro != nil {
 		respostas.Erro(w, http.StatusInternalServerError, erro)
 		return
