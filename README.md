@@ -28,11 +28,8 @@ Essencialmente a linguagem Go possui o paradigma imperativo, porém ela possui v
 - Outros - Por fim, tem uma documentação bastante clara e completa no site oficial: https://go.dev/doc/. Sendo multiplataforma suportando as maiorias dos sistemas operacionais como Windows, macOS, Linux e outras plataformas UNIX.
 
 ## 👨‍💻 Exemplos 
-1
+1 ) Programa utilizando interface para atribuir uma abstração para as structs retangulo e circulo, atribuindo o tipo "forma" em toda struct que tiver o método "area()", e assim, a função "escreverArea" pode dinâmicamente utilizar o método "area()" independentemente de ser retangulo ou circulo (polimorfismo).
 ```
-/* 
-Programa utilizando interface para atribuir uma abstração para as structs retangulo e circulo, atribuindo o tipo "forma" em toda struct que tiver o método "area()", e assim, a função "escreverArea" pode dinâmicamente utilizar o método "area()" independentemente de ser retangulo ou circulo (polimorfismo).
-*/
 
 package main
 
@@ -75,13 +72,14 @@ func main() {
 	escreverArea(c)
 }
 ```
-2
-```
-/*
-Programa que demonstra a programação concorrente utilizando o select, basicamente cria duas funções anonimas, uma executando em meio segundo e outra em 2 segundos, assim executo outro for infinito com um select dentro que toda vez que algum canal estiver enviando uma mensagem ele imprime na tela a mensagem recebida, entao teremos sempre 4 mensagens do canal 1 e depois 1 do canal 2 e assim infinitamente (Para parar o programa basta executar crtl + c).
+2 )
+Programa que demonstra a programação concorrente utilizando o select, 
+basicamente cria duas funções anonimas, uma executando em meio segundo e outra em 2 segundos, 
+assim executo outro for infinito com um select dentro que toda vez que algum canal estiver enviando uma mensagem
+ele imprime na tela a mensagem recebida, entao teremos sempre 4 mensagens do canal 1 e depois 1 do canal 2 e assim infinitamente (Para parar o programa basta executar crtl + c).
 
 EXCESSÃO: na primeira execução ira aparecer 3 mensagem do primeiro canal, pois existe a demora da execução do código, demonstrando que o select se aciona no canal que enviar a mensagem primeiro.
-*/
+```
 
 package main
 
