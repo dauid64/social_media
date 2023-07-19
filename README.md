@@ -117,7 +117,7 @@ func main() {
 ```
 
 ## 🚀 Instalação do Site
-1) Primeiro você tera que criar um arquivo na API e na aplicação WEB chamda ".env" e copiar o arquivo já existente ".env-example", básicamente essas são as váriaveis de ambiente do seu projeto, então configure de acordo com os seus dados.
+1) Primeiro você tera que criar um arquivo na API e na aplicação WEB chamado ".env" e copiar o arquivo já existente ".env-example", básicamente essas são as váriaveis de ambiente do seu projeto, então configure de acordo com os seus dados.
 
 2) Crie o banco MySQL de acordo com as váriaveis de ambiente do seu projeto e execute o comando SQL localizado na pasta api/sql/sql.sql
 
